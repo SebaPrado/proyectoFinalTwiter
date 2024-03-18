@@ -4,19 +4,22 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Registro() {
-  const [data, setData] = useState({
-    firstname: "",
-    lastname: "",
-    username: "",
-    password: "",
-    email: "",
+  const [datos, setDatos] = useState({
+    nombre: " pepe",
+    lastname: "lopez",
+    username: "pepelopez",
+    password: "1234",
+    email: "pepelo",
     descripcion: "No hay descripcion",
-    fotoDePerfil: "",
+    fotoDePerfil: "noHayFoto",
   });
+  //console.log( " datos "+  datos);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setData({
+    // const prueba = e.target.name
+    console.log(prueba);
+    setDatos({
       [name]: value,
     });
   };
@@ -26,10 +29,11 @@ function Registro() {
     const response = await axios({
       method: `POST`,
       url: `http://localhost:3004/usuarios`,
-      data: data,
+      data: datos,
     });
     console.log("Usuario creado:", response.data);
   };
+
 
   return (
     <>
@@ -50,7 +54,7 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="First name"
-                  value={data.firstname}
+                  value={datos.nombre}
                   onChange={handleChange}
                 />
               </div>
@@ -60,17 +64,17 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="Last name"
-                  value={data.lastname}
+                  value={datos.lastname}
                   onChange={handleChange}
                 />
               </div>
               <div>
                 <label htmlFor="email" className="form-label"></label>
                 <input
-                  type="email"
+                  type="text"
                   className="form-control"
                   placeholder="Email"
-                  value={data.email}
+                  value={datos.email}
                   onChange={handleChange}
                 />
               </div>
@@ -80,7 +84,7 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="Username"
-                  value={data.username}
+                  value={datos.username}
                   onChange={handleChange}
                 />
               </div>
@@ -88,9 +92,9 @@ function Registro() {
                 <label htmlFor="formFile" className="form-label"></label>
                 <input
                   className="form-control"
-                  type="file"
+                  type="text"
                   id="formFile"
-                  value={data.fotoDePerfil}
+                  value={datos.fotoDePerfil}
                   onChange={handleChange}
                 />
               </div>
@@ -100,7 +104,7 @@ function Registro() {
                   type="password"
                   className="form-control"
                   placeholder="Password"
-                  value={data.password}
+                  value={datos.password}
                   onChange={handleChange}
                 />
               </div>

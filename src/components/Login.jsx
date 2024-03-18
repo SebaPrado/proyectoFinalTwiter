@@ -63,7 +63,7 @@ function Login() {
       </form>
       <hr />
 
-      <Link to={"http://localhost:5175/registro"}>
+      <Link to={"http://localhost:5173/registro"}>
         <button type="button">Registro Component</button>{" "}
       </Link>
     </>
