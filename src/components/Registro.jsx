@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Registro() {
   const [datos, setDatos] = useState({
-    nombre: " pepe",
+    firstname: "pepe",
     lastname: "lopez",
     username: "pepelopez",
     password: "1234",
@@ -13,15 +13,13 @@ function Registro() {
     descripcion: "No hay descripcion",
     fotoDePerfil: "noHayFoto",
   });
-  //console.log( " datos "+  datos);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // const prueba = e.target.name
-    console.log(prueba);
-    setDatos({
+    setDatos((prevDatos) => ({
+      ...prevDatos,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -33,7 +31,6 @@ function Registro() {
     });
     console.log("Usuario creado:", response.data);
   };
-
 
   return (
     <>
@@ -54,7 +51,8 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="First name"
-                  value={datos.nombre}
+                  name="firstname"
+                  value={datos.firstname}
                   onChange={handleChange}
                 />
               </div>
@@ -64,6 +62,7 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="Last name"
+                  name="lastname"
                   value={datos.lastname}
                   onChange={handleChange}
                 />
@@ -74,6 +73,7 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="Email"
+                  name="email"
                   value={datos.email}
                   onChange={handleChange}
                 />
@@ -84,6 +84,7 @@ function Registro() {
                   type="text"
                   className="form-control"
                   placeholder="Username"
+                  name="username"
                   value={datos.username}
                   onChange={handleChange}
                 />
@@ -94,6 +95,7 @@ function Registro() {
                   className="form-control"
                   type="text"
                   id="formFile"
+                  name="fotoDePerfil"
                   value={datos.fotoDePerfil}
                   onChange={handleChange}
                 />
@@ -104,6 +106,7 @@ function Registro() {
                   type="password"
                   className="form-control"
                   placeholder="Password"
+                  name="password"
                   value={datos.password}
                   onChange={handleChange}
                 />
