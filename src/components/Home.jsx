@@ -9,11 +9,7 @@ function Home() {
   const token = useSelector((state) => state.user.token);
   console.log("token: " + token);
 
-  // const handleTweetieContent = (e) => {
-  //   setTweetieContent(e);
-  //   console.log(tweetieContent);
-  // };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const postTweets = async () => {
@@ -23,7 +19,7 @@ function Home() {
         headers: {
           Authorization: "Bearer " + token,
         },
-        content: setTweetieContent(tweetieContent),
+        data: { text: tweetieContent },
       });
 
       // no guardar como estado , guardarlo en la store
@@ -33,6 +29,20 @@ function Home() {
   };
   return (
     <>
+    <span >
+        <Link to={"http://localhost:5174/registro"}>
+          <button type="button">Registro Component</button>{" "}
+        </Link>
+      </span>
+      <span>
+        <Link to={"http://localhost:5174/login"}>
+          <button type="button">Registro Component</button>{" "}
+        </Link>
+      </span ><span>
+        <Link to={"http://localhost:5174/profile"}>
+          <button type="button">Registro Component</button>{" "}
+        </Link>
+      </span>
       <h2>Home</h2>
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="newTweet"> Whats happening...</label>
