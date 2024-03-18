@@ -9,11 +9,7 @@ function Home() {
   const token = useSelector((state) => state.user.token);
   console.log("token: " + token);
 
-  // const handleTweetieContent = (e) => {
-  //   setTweetieContent(e);
-  //   console.log(tweetieContent);
-  // };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const postTweets = async () => {
