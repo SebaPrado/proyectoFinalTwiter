@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import "./App.css";
 
 const isAuthenticated = () => {
-  const token = useSelector((state) => state.user.token)
+  const token = useSelector((state) => state.user.token);
   return token !== null;
   console.log("hola");
 };
