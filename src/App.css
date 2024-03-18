@@ -1,0 +1,114 @@
+#root {
+ 
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* button{
+  margin: 15px;
+  box-shadow: 0 0 10px  red ;
+}
+ 
+label{
+  margin: 15px;
+
+}
+
+input{
+  margin: 15px;
+
+} */
+.contenedorTweets{
+  margin: 5px;
+  border: 2px solid ;
+  background-color: rgb(246, 193, 193);
+}
+
+.login-left-side {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(36, 98, 169);
+}
+
+.login-right-side {
+  flex-direction: column;
+  background-color: white;
+}
+
+.login-both-sides {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 155px;
+  margin-bottom: 155px;
+}
+
+.signUp-both-sides {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.links {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(32, 54, 81);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-button {
+  width: 73px;
+}
+
+.news {
+  background-color: rgb(121, 123, 123);
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.text {
+  color: #403e3e;
+}
+
+.title {
+  color: white;
+}
+
+.main {
+  width: 77vw;
+}
