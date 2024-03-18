@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { updateToken } from "../redux/UserSlice";
@@ -8,6 +8,7 @@ function Login() {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -31,7 +32,7 @@ function Login() {
     console.log(token);
     dispatch(updateToken(token));
 
-    return <Navigate to="/" />;
+    navigate("/");
 
     // aca tengo que enviar los datos al servidor , hacer el llamado a la api con metodo POST
   };
@@ -58,10 +59,8 @@ function Login() {
           onChange={handlePasswordChange}
         />
         <br />
-
         <button type="submit">Login</button>
       </form>
-
       <hr />
 
       <Link to={"http://localhost:5175/registro"}>

@@ -11,24 +11,22 @@ import Home2 from "./components/Home2";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import Registro from "./components/Registro";
-import { useSelector } from "react-redux";
 import "./App.css";
 
-const isAuthenticated = () => {
-  const token = useSelector((state) => state.user.token)
-  return token !== null;
-  console.log("hola");
-};
+// const isAuthenticated = () => {
+//   const token = useSelector((state) => state.user.token)
+//   return token !== null;
+// };
 
-const PrivateRoute = ({ path, element }) => {
-  console.log("isAuthenticated:", isAuthenticated);
-  return (
-    <Route
-      path={path}
-      element={isAuthenticated() ? element : <Navigate to="/login" replace />}
-    />
-  );
-};
+// const PrivateRoute = ({ path, element }) => {
+//   console.log("isAuthenticated:", isAuthenticated);
+//   return (
+//     <Route
+//       path={path}
+//       element={isAuthenticated() ? element : <Navigate to="/login" replace />}
+//     />
+//   );
+// };
 
 const router = createBrowserRouter([
   {
@@ -56,13 +54,13 @@ const router = createBrowserRouter([
 function App() {
   return (
     <RouterProvider router={router}>
-      <Routes>
+      {/* <Routes>
         <PrivateRoute path="/" element={<Home />} />
         <Route path="/2" element={<Home2 />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/registro" element={<Registro />} />
+        <PrivateRoute path="/registro" element={<Registro />} />
         <Route path="/profile" element={<Profile />} />
-      </Routes>
+      </Routes> */}
     </RouterProvider>
   );
 }

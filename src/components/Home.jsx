@@ -3,14 +3,20 @@ import Tweets from "./Tweets";
 import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 function Home() {
-  const [tweetieContent, setTweetieContent] = useState("");
   const token = useSelector((state) => state.user.token);
-  console.log("token: " + token);
-
+  console.log("el token es "+token);
+  if (!token) {
+    console.log("te estoy rebotando");
+    return <Navigate to="/login" replace />;
+  }
   
+  console.log("no te rebote , entraste a Home");
+  const [tweetieContent, setTweetieContent] = useState("");
+
+  console.log("token: " + token);
   const handleSubmit = (e) => {
     e.preventDefault();
     const postTweets = async () => {
@@ -21,18 +27,16 @@ function Home() {
           Authorization: "Bearer " + token,
         },
         data: { text: tweetieContent },
+        //params :,
       });
       // no guardar como estado , guardarlo en la store
       console.log("Tweet enviado:", response.data);
-
-      
-
     };
     postTweets();
   };
   return (
     <>
-    <span >
+      <span>
         <Link to={"http://localhost:5174/registro"}>
           <button type="button">Registro Component</button>{" "}
         </Link>
@@ -41,7 +45,8 @@ function Home() {
         <Link to={"http://localhost:5174/login"}>
           <button type="button">Login Component</button>{" "}
         </Link>
-      </span ><span>
+      </span>
+      <span>
         <Link to={"http://localhost:5174/profile"}>
           <button type="button">Perfil de usuario Component</button>{" "}
         </Link>
