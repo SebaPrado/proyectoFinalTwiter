@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const userSlice = createSlice({
   name: " user",
   initialState: {
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQ2MTUwMmUwZTc5Y2M3MjMyZWU5NTEiLCJpYXQiOjE3MTA3MTI5NDd9.zHbsLPznh1_eGJ2G6YJRC1dn179pO2MvS2nwQei_qM0",
+    token: "",
   },
   reducers: {
     updateToken(state, action) {

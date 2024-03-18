@@ -30,8 +30,10 @@ function Login() {
     const token = response.data;
     console.log(token);
     dispatch(updateToken(token));
-   
-     // aca tengo que enviar los datos al servidor , hacer el llamado a la api con metodo POST
+
+    return <Navigate to="/" />;
+
+    // aca tengo que enviar los datos al servidor , hacer el llamado a la api con metodo POST
   };
 
   return (
@@ -56,9 +58,8 @@ function Login() {
           onChange={handlePasswordChange}
         />
         <br />
-        <Link to={"http://localhost:5175/"}>
-          <button type="submit">Login</button>
-        </Link>
+
+        <button type="submit">Login</button>
       </form>
 
       <hr />

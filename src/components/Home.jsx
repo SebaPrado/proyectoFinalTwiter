@@ -3,6 +3,7 @@ import Tweets from "./Tweets";
 import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [tweetieContent, setTweetieContent] = useState("");
@@ -21,9 +22,11 @@ function Home() {
         },
         data: { text: tweetieContent },
       });
-
       // no guardar como estado , guardarlo en la store
       console.log("Tweet enviado:", response.data);
+
+      
+
     };
     postTweets();
   };
@@ -36,11 +39,11 @@ function Home() {
       </span>
       <span>
         <Link to={"http://localhost:5174/login"}>
-          <button type="button">Registro Component</button>{" "}
+          <button type="button">Login Component</button>{" "}
         </Link>
       </span ><span>
         <Link to={"http://localhost:5174/profile"}>
-          <button type="button">Registro Component</button>{" "}
+          <button type="button">Perfil de usuario Component</button>{" "}
         </Link>
       </span>
       <h2>Home</h2>
