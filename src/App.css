@@ -40,6 +40,15 @@ input{
   border-radius: 4px;
   margin-top: 135px;
   margin-bottom: 135px;
+  max-width: 600px;
+}
+
+.contenedor {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .signUp-both-sides {
@@ -47,6 +56,7 @@ input{
   border-radius: 4px;
   margin-top: 42px;
   margin-bottom: 42px;
+  max-width: 800px;
 }
 
 .links {
