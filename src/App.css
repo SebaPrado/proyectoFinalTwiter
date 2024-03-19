@@ -1,5 +1,7 @@
 #root {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
 }
 
 /* button{
@@ -37,8 +39,8 @@ input{
 .login-both-sides {
   border: 2px solid black;
   border-radius: 4px;
-  margin-top: 155px;
-  margin-bottom: 155px;
+  margin-top: 135px;
+  margin-bottom: 135px;
 }
 
 .signUp-both-sides {

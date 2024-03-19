@@ -2,7 +2,7 @@ import React from "react";
 
 function News() {
   return (
-    <div className="news col-2">
+    <div className="news col-2 p-0 m-3">
       <h4 className="mx-3 mt-3 p-2 title">What's happening</h4>
       <div className="mt-3 mb-2 mx-4">
         <p className=" mb-0 text">Programming - Trending</p>
