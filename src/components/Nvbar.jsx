@@ -20,7 +20,7 @@ function Navbar() {
           </Link>
         </li>
         <li className="mx-1 mb-2">
-          <Link to="profile" className="links">
+          <Link to="/profile" className="links">
             <FontAwesomeIcon icon={faUser} size="sm" color="white" />
             <span className="text-white"> User</span>
           </Link>
