@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "./Nvbar";
 import News from "./News";
 
