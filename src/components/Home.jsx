@@ -3,6 +3,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Navbar from "./Nvbar";
+import News from "./News";
 
 function Home() {
   const token = useSelector((state) => state.user.token);
@@ -32,28 +35,32 @@ function Home() {
     postTweet();
   };
   return (
-    <>
-      <Link to="/registro">Registro Component</Link>
+    <div className="row">
+      <Navbar />
+      <div className="col-7">
+        <Link to="/registro">Registro Component</Link>
 
-      <Link to="/login">Login Component</Link>
+        <Link to="/login">Login Component</Link>
 
-      <Link to="/profile">Perfil de usuario Component</Link>
+        <Link to="/profile">Perfil de usuario Component</Link>
 
-      <h2>Home</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="newTweet">Whats happening</label>
-        <input
-          placeholder="hola"
-          type="text"
-          id="newTweet"
-          name="newTweet"
-          value={tweetieContent}
-          onChange={(e) => setTweetieContent(e.target.value)} ///cambio
-        />
-        <button>Crear Tweet</button>
-      </form>
-      <Tweets />
-    </>
+        <h2>Home</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="newTweet">Whats happening</label>
+          <input
+            placeholder="hola"
+            type="text"
+            id="newTweet"
+            name="newTweet"
+            value={tweetieContent}
+            onChange={(e) => setTweetieContent(e.target.value)} ///cambio
+          />
+          <button>Crear Tweet</button>
+        </form>
+        <Tweets />
+      </div>
+      <News />
+    </div>
   );
 }
 
