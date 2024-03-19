@@ -3,6 +3,7 @@ import Navbar from "./Nvbar";
 import News from "./News";
 import { useSelector } from "react-redux";
 import Tweets from "./Tweets";
+import UserTweets from "./UserTweets";
 
 function Profile() {
   // const token = useSelector((state) => state.user.token);
@@ -60,7 +61,7 @@ function Profile() {
             </div>
           </div>
         </div>
-        <Tweets />
+        <UserTweets />
       </div>
       <News />
     </div>

@@ -9,6 +9,7 @@ import News from "./News";
 function Home() {
   const token = useSelector((state) => state.user.token);
   console.log("el token es " + token);
+
   if (token === "credenciales invalidas") {
     console.log("te estoy rebotando");
     return <Navigate to="/login" replace />;
