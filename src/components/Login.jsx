@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { updateToken } from "../redux/UserSlice";
+import { updateToken } from "../redux/userSlice";
 
 function Login() {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function Login() {
       },
     });
     const token = response.data;
-    console.log(token);
+    console.log({response});
     dispatch(updateToken(token));
 
     navigate("/");
