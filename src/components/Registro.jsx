@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 function Registro() {
   const [datos, setDatos] = useState({
-    firstname: "pepe",
-    lastname: "lopez",
-    username: "pepelopez",
-    password: "1234",
-    email: "pepelo",
+    firstname: "",
+    lastname: "",
+    username: "",
+    password: "",
+    email: "",
     descripcion: "No hay descripcion",
-    fotoDePerfil: "noHayFoto",
+    fotoDePerfil: "",
   });
 
   const handleChange = (e) => {
@@ -93,7 +93,7 @@ function Registro() {
                 <label htmlFor="formFile" className="form-label"></label>
                 <input
                   className="form-control"
-                  type="text"
+                  type="file"
                   id="formFile"
                   name="fotoDePerfil"
                   value={datos.fotoDePerfil}

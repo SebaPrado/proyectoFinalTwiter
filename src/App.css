@@ -1,8 +1,6 @@
 #root {
- 
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 /* button{
@@ -19,9 +17,9 @@ input{
   margin: 15px;
 
 } */
-.contenedorTweets{
+.contenedorTweets {
   margin: 5px;
-  border: 2px solid ;
+  border: 2px solid;
   background-color: rgb(246, 193, 193);
 }
 
@@ -63,7 +61,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 li a {
