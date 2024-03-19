@@ -34,7 +34,7 @@ function Registro() {
 
   return (
     <>
-      <div className="container signUp-both-sides">
+      <div className="container">
         <div className="row">
           <div className="col-7 login-left-side d-none d-md-flex p-3">
             <h2>X</h2>

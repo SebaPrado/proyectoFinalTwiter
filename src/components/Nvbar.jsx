@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="order-list col-2">
+    <div className="order-list col-2 m-3 p-0">
       <ul className="lista">
         <li className="m-1">
           <Link to="" className="links">

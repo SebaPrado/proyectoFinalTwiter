@@ -37,7 +37,7 @@ function Home() {
   return (
     <div className="row">
       <Navbar />
-      <div className="col-7">
+      <div className="col-7 m-0 p-2">
         <Link to="/registro">Registro Component</Link>
 
         <Link to="/login">Login Component</Link>
