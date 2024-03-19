@@ -9,16 +9,14 @@ import News from "./News";
 function Home() {
   const token = useSelector((state) => state.user.token);
   console.log("el token es " + token);
-
   if (token === "credenciales invalidas") {
-    console.log("te estoy rebotando");
+    //|| token===null
+    alert("credenciales invalidas ");
     return <Navigate to="/login" replace />;
   }
 
-  console.log("no te rebote , entraste a Home");
   const [tweetieContent, setTweetieContent] = useState("");
 
-  console.log("token: " + token);
   const handleSubmit = (e) => {
     e.preventDefault();
     const postTweet = async () => {
@@ -30,7 +28,6 @@ function Home() {
         },
         data: { text: tweetieContent },
       });
-      console.log({ "Tweet enviado": response.data });
     };
     postTweet();
   };

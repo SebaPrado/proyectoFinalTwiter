@@ -29,12 +29,9 @@ function Login() {
       },
     });
     const token = response.data;
-    console.log({ response });
     dispatch(updateToken(token));
 
     navigate("/");
-
-    // aca tengo que enviar los datos al servidor , hacer el llamado a la api con metodo POST
   };
 
   return (
