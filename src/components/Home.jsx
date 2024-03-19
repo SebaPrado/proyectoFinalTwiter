@@ -35,28 +35,32 @@ function Home() {
     postTweet();
   };
   return (
-    <div className="row">
+    <div className="row ">
       <Navbar />
-      <div className="col-7 m-0 p-2">
-        <Link to="/registro">Registro Component</Link>
+      <div className="col-7 m-0 p-0">
+        {/* <Link to="/registro">Registro Component</Link>
 
         <Link to="/login">Login Component</Link>
 
-        <Link to="/profile">Perfil de usuario Component</Link>
-
-        <h2>Home</h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="newTweet">Whats happening</label>
-          <input
-            placeholder="hola"
-            type="text"
-            id="newTweet"
-            name="newTweet"
-            value={tweetieContent}
-            onChange={(e) => setTweetieContent(e.target.value)} ///cambio
-          />
-          <button>Crear Tweet</button>
-        </form>
+        <Link to="/profile">Perfil de usuario Component</Link> */}
+        <div className="border-tw p-3 text-white">
+          <h2>Home</h2>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="newTweet">IMG</label>
+            <input
+              className="mx-2 search"
+              placeholder="What's happening?"
+              type="text"
+              id="newTweet"
+              name="newTweet"
+              value={tweetieContent}
+              onChange={(e) => setTweetieContent(e.target.value)} ///cambio
+            />
+            <div className="d-flex justify-content-end">
+              <button className="btn btn-primary">Tweet</button>
+            </div>
+          </form>
+        </div>
         <Tweets />
       </div>
       <News />

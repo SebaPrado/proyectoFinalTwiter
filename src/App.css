@@ -1,8 +1,8 @@
-#root {
+/* #root {
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
-}
+} */
 
 /* button{
   margin: 15px;
@@ -20,8 +20,7 @@ input{
 } */
 .contenedorTweets {
   margin: 5px;
-  border: 2px solid;
-  background-color: rgb(246, 193, 193);
+  color: white;
 }
 
 .login-left-side {
@@ -74,13 +73,12 @@ li a {
 li a:hover {
   background-color: #555;
   color: white;
+  margin-left: 3px;
 }
 
 .lista {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .order-list {
@@ -88,26 +86,65 @@ li a:hover {
   flex-direction: column;
 }
 
-.size-button {
-  width: 73px;
-}
-
 .news {
   background-color: rgb(121, 123, 123);
   max-width: 300px;
-  max-height: 400px;
+  max-height: 300px;
   border-radius: 20px;
   margin: 10px;
 }
 
 .text {
   color: #403e3e;
+  font-size: small;
 }
 
 .title {
   color: white;
+  font-size: small;
+}
+
+.big-title {
+  color: white;
+  font-size: large;
 }
 
 .main {
   width: 77vw;
+}
+
+.border-tw {
+  border: 0.1px solid rgb(117, 117, 117);
+}
+
+.search {
+  border: none;
+  outline: none;
+  background-color: rgb(32, 54, 81);
+}
+
+.user-back-img {
+  background-image: url("https://uchile.cl/.imaging/default/dam/imagenes/Uchile/imagenes-noticias/152294_3_star-wars-08-l_L/jcr:content.jpg");
+  margin-bottom: 6rem;
+  height: 25vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.user-img {
+  background-image: url("https://i.pinimg.com/originals/e7/69/f2/e769f2240325b76976002c863bd8a766.png");
+  background-size: cover;
+  background-position: center;
+  background-position-y: 10%;
+  width: 180px;
+  height: 180px;
+  border: 4px solid white;
+  position: absolute;
+  bottom: -50%;
+  margin-left: 1rem;
+}
+
+.text-g {
+  color: #a8a8a8a3;
 }
