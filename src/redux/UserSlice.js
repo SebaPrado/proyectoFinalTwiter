@@ -7,9 +7,7 @@ const userSlice = createSlice({
   },
   reducers: {
     updateToken(state, action) {
-      const token = action.payload;
-
-      state.token = token;
+      state.token = action.payload;
     },
   },
 });

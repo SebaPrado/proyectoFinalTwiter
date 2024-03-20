@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { nanoid } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
-import { createTweet } from "../redux/tweetsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addTweets, createTweet } from "../redux/tweetsSlice";
 
 function Tweets() {
   const dispatch = useDispatch();
-
-  const [tweetList, setTweetList] = useState([]);
+  const tweetList = useSelector((state) => state.tweets);
 
   useEffect(() => {
     const getTweets = async () => {
@@ -15,13 +14,12 @@ function Tweets() {
         method: `GET`,
         url: `http://localhost:3004/tweets`,
       });
+      dispatch(addTweets(response.data));
 
-      setTweetList(response.data); // no guardar como estado , guardarlo en la store
+      // setTweetList(response.data);
     };
     getTweets();
   }, []);
-
-  dispatch(createTweet(tweetList));
 
   return (
     <>
@@ -35,7 +33,7 @@ function Tweets() {
                   <div className="col-10">
                     <h6>{tweet.user?.firstname}</h6>
                     <p>{tweet.texto}</p>
-                    <p>Likes : {tweet.likes.length}</p>
+                    <p>Likes : 0</p>
                   </div>
                 </div>
               </div>{" "}

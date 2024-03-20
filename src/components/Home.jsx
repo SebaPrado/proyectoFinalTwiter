@@ -1,13 +1,16 @@
 import Tweets from "./Tweets";
 import { useState } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import Navbar from "./Nvbar";
 import News from "./News";
+import { addTweets } from "../redux/tweetsSlice";
 
 function Home() {
   const token = useSelector((state) => state.user.token);
+  const dispatch = useDispatch();
+
   console.log("el token es " + token);
   if (token === "credenciales invalidas") {
     //|| token===null
@@ -28,6 +31,9 @@ function Home() {
         },
         data: { text: tweetieContent },
       });
+      dispatch(addTweets([response.data]));
+
+      setTweetieContent("");
     };
     postTweet();
   };

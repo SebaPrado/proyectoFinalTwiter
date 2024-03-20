@@ -5,6 +5,10 @@ const tweetsSlice = createSlice({
   name: "tweets",
   initialState: [hola],
   reducers: {
+    addTweets(state, action) {
+      return [...action.payload, ...state];
+    },
+
     createTweet(state, action) {
       state.push(action.payload);
     },
@@ -20,6 +24,7 @@ const actions = tweetsSlice.actions;
 
 const createTweet = actions.createTweet;
 const deleteTweet = actions.deleteTweet;
+const addTweets = actions.addTweets;
 
 export default tweetsReducer;
-export { createTweet, deleteTweet };
+export { addTweets, createTweet, deleteTweet };

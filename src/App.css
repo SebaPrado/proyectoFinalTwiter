@@ -124,7 +124,7 @@ li a:hover {
 }
 
 .border-tw {
-  border: 0.1px solid rgb(117, 117, 117);
+  border: 0.1px solid rgba(117, 117, 117, 0.165);
 }
 
 .search {
