@@ -47,7 +47,7 @@ function Home() {
 
         <Link to="/profile">Perfil de usuario Component</Link> */}
         <div className="border-tw p-3 text-white">
-          <h2>Home</h2>
+          <h2>Home.</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="newTweet">IMG</label>
             <input
