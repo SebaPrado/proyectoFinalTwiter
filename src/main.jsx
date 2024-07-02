@@ -6,7 +6,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import tweetsReducer from "../src/redux/tweetsSlice.js";
-import userReducer from "./redux/userSlice.js";
+import userReducer from "../src/redux/UserSlice.js";
 
 const store = configureStore({
   reducer: {
